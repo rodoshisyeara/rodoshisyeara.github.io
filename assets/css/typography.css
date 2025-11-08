@@ -1,0 +1,18 @@
+/* Bigger readable body copy, no layout changes */
+p,
+li {
+  font-size: 18px;     /* was smaller; now ≈ 18px */
+  line-height: 1.7;    /* improves readability */
+}
+
+/* For publication lists where <span> is used heavily */
+.publication-text span {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Optional: table cells if you use tables anywhere */
+td, th {
+  font-size: 18px;
+  line-height: 1.6;
+}
