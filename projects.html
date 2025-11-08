@@ -3,10 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Steller landing page.">
-    <meta name="author" content="Devcrud">
-    <link rel="icon" type="image/png" href="assets/imgs/Double T 4C.png">
-    <title>Kaiser Hamid</title>
+    <meta name="description" content="Projects by Noushin Syeara Rodoshi in transportation engineering, intelligent transport systems, and data-driven traffic analysis.">
+    <meta name="author" content="Noushin Syeara Rodoshi">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/imgs/noushin.png">
+    <title>Projects – Noushin Syeara Rodoshi</title>
+
+    <!-- Icons & CSS -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/steller.css">
@@ -21,15 +24,16 @@
             background-color: #2c2c2c;
             color: #ffffff;
             border: 1px solid #444;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow to create contrast */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         body.dark-mode .card-body {
-            background-color: #2c2c2c; /* Darker card body background */
+            background-color: #2c2c2c;
             border-top: 1px solid #444;
             padding: 15px;
         }
-        body.dark-mode .card-title, body.dark-mode .card-text {
-            color: #ffffff; /* Ensures text color stays white in dark mode */
+        body.dark-mode .card-title,
+        body.dark-mode .card-text {
+            color: #ffffff;
         }
         body.dark-mode .btn-primary {
             background-color: #007bff;
@@ -47,13 +51,14 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" onload="onload()">
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <h5 class="title">Kaiser Hamid</h5>
+                <h5 class="title">Noushin Syeara Rodoshi</h5>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -80,157 +85,100 @@
         </div>
     </nav>
 
+    <!-- Projects Content -->
     <div class="container mt-5">
         <h2 class="col-12 mb-4 text-center">Projects</h2>
 
-        <!-- PhD Projects -->
-<!-- EEG Foundation Challenge Project -->
-        <h3 class="col-12 mt-5 mb-4">PhD Projects</h3>
+        <!-- Computer Vision & ML for Transportation -->
+        <h3 class="col-12 mt-5 mb-4">Computer Vision & Machine Learning for Transportation</h3>
         <div class="row">
-        <div class="col-md-4 col-sm-6 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
-                <h5 class="card-title">EEG Foundation Challenge</h5>
-                <p class="card-text">Cross-task transfer learning on large-scale EEG datasets for robust brain decoding.</p>
-                <a href="#" class="btn btn-primary btn-block">Paper (Loading)</a>
-                <a href="https://github.com/Kaiser-75/EEG-Foundation-Challenge" class="btn btn-primary btn-block">Code</a>
-            </div>
-        </div>
-        </div>
-            <!-- Gaze-Adaptive AR Project -->
+            <!-- YOLOv8 Traffic Detection -->
             <div class="col-md-4 col-sm-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Gaze-Adaptive AR Hazard Cueing in driving context</h5>
-                        <p class="card-text">Real-time gaze-adaptive Augmented Reality (AR) system to cue drivers to unnoticed hazards in critical events.</p>
-                        <a href="#" class="btn btn-primary btn-block">Paper (In Progress)</a>
-                        <a href="https://github.com/Kaiser-75/GazeAdaptiveAR" class="btn btn-primary btn-block">Code (In Progress)</a>
-                        <a href="#" class="btn btn-primary btn-block">Demo (In Progress)</a>
+                        <h5 class="card-title">YOLOv8 Traffic Detection for Dhaka</h5>
+                        <p class="card-text">
+                            Deployed a YOLOv8-L object detector on Dhaka traffic imagery using a large,
+                            manually labeled dataset. Focused on multimodal traffic (car, bus, CNG,
+                            rickshaw, etc.) and built a reusable pipeline for robust detection and analysis.
+                        </p>
+                        <p class="card-text">
+                            <strong>Technologies:</strong> Python, YOLOv8, Computer Vision
+                        </p>
+                        <!-- Add your GitHub link here when ready -->
+                        <!-- <a href="#" class="btn btn-primary btn-block">Code</a> -->
                     </div>
                 </div>
             </div>
-            <!-- TransAD Project -->
+
+            <!-- Dhaka Corridor Multimodal Traffic Counts -->
             <div class="col-md-4 col-sm-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">TransAD: End-to-End Autonomous Driving</h5>
-                        <p class="card-text">Developing novel approaches for end-to-end autonomous driving systems.</p>
-                        <a href="#" class="btn btn-primary btn-block">Paper (Loading)</a>
-                        <a href="https://github.com/Kaiser-75/TransAD-Transformer-based-End-to-End-autonomous-driving" class="btn btn-primary btn-block">Code</a>
+                        <h5 class="card-title">Dhaka Corridor Multimodal Traffic Counts from Video</h5>
+                        <p class="card-text">
+                            Used a YOLOv8-based detector, line-based tracking, and hand-drawn regions of
+                            interest on a corridor video to generate lane-level multimodal traffic counts.
+                            Captured flows of pedestrians, rickshaws, bicycles, and vehicles and identified
+                            contra-flow movements for corridor-level analysis.
+                        </p>
+                        <p class="card-text">
+                            <strong>Technologies:</strong> Python, YOLOv8, Video Analytics
+                        </p>
+                        <!-- <a href="#" class="btn btn-primary btn-block">Code</a> -->
+                        <!-- <a href="#" class="btn btn-primary btn-block">Demo</a> -->
                     </div>
                 </div>
             </div>
-            
-            <!-- CARLA HITL Project -->
+
+            <!-- Road Traffic Accident Severity Prediction -->
             <div class="col-md-4 col-sm-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Developing CARLA for Human-in-the-Loop (HITL)</h5>
-                        <p class="card-text">Framework for human-in-the-loop autonomous vehicle testing using CARLA simulator.</p>
-                        <a href="#" class="btn btn-primary btn-block">Paper (Loading)</a>
-                        <a href="#" class="btn btn-primary btn-block">Code (Loading)</a>
-                        <a href="https://youtube.com/shorts/8u1rD0Rj4ZY?si=wHBDC9hcM0O7qcvC" class="btn btn-primary btn-block">Demo</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- FSDAM Project -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">FSDAM: Vision-Language Model Based Driver Attention Modeling</h5>
-                        <p class="card-text">Advanced driver attention prediction using vision-language models.</p>
-                        <a href="#" class="btn btn-primary btn-block">Paper (Loading)</a>
-                        <a href="https://github.com/Kaiser-75/FSDAM-Few-Shot-Driving-Attention-Modeling-via-Vision-Language-In-Context-Learning" class="btn btn-primary btn-block">Code </a>
+                        <h5 class="card-title">Road Traffic Accident Severity Prediction</h5>
+                        <p class="card-text">
+                            Developed machine learning models to predict accident severity classes
+                            (Slight, Serious, Fatal) using an imbalanced accident dataset. Applied
+                            techniques such as SMOTE and undersampling, and evaluated models including
+                            Random Forest and XGBoost with F1-score and feature importance analysis.
+                        </p>
+                        <p class="card-text">
+                            <strong>Technologies:</strong> Python, Scikit-learn, XGBoost, Data Analytics
+                        </p>
+                        <!-- <a href="#" class="btn btn-primary btn-block">Code</a> -->
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Graduate Projects -->
-        <h3 class="col-12 mt-5 mb-4">Graduate Projects</h3>
+        <!-- Transportation Modelling & Research -->
+        <h3 class="col-12 mt-5 mb-4">Transportation Modelling & Research</h3>
         <div class="row">
-            <!-- First Graduate Project -->
+            <!-- Freight Attraction Modelling / Thesis -->
             <div class="col-md-4 col-sm-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Integrating Raspberry Pi with CAN</h5>
-                        <a href="#" class="btn btn-primary btn-block">Code loading</a>
-                        <a href="https://youtu.be/UFJ7X3FRmKQ?si=RbbBzP1_2IVeJM74" class="btn btn-primary btn-block"> Demo </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Second Graduate Project -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Human In The Loop (HITL) framework by CARLA</h5>
-                        <a href="https://youtube.com/shorts/8u1rD0Rj4ZY?si=wHBDC9hcM0O7qcvC" class="btn btn-primary btn-block">Demo </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Undergraduate Projects -->
-        <h3 class="col-12 mt-5 mb-4">Undergraduate Projects</h3>
-        <div class="row">
-            <!-- Existing Undergraduate Projects -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <img src="https://img.youtube.com/vi/aOExN9XZDoQ/0.jpg" alt="Pedestrian detection thumbnail" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Pedestrian detection using deep learning</h5>
-                        <p class="card-text">L4 T2 (8th semester) <br><strong>Technologies:</strong> Python, Google Colab</p>
-                        <a href="https://youtu.be/aOExN9XZDoQ" class="btn btn-primary btn-block">Watch Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <img src="https://img.youtube.com/vi/rugmiMs0m8U/0.jpg" alt="Traffic mode detection thumbnail" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Traffic mode detection & tracking for Dhaka, Bangladesh</h5>
-                        <p class="card-text">L4 T2 (8th semester) <br><strong>Technologies:</strong> Python, Google Colab</p>
-                        <a href="https://youtu.be/rugmiMs0m8U" class="btn btn-primary btn-block">Watch Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <img src="https://img.youtube.com/vi/ZXI0C4N1Xfc/0.jpg" alt="Intersection Simulation thumbnail" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Gulshan-1 intersection Simulation for CAPSTONE Project</h5>
-                        <p class="card-text">L4 T1 <br><strong>Technologies:</strong> VISSIM Software</p>
-                        <a href="https://youtu.be/ZXI0C4N1Xfc?si=5OP9gwe0avYCYtcT" class="btn btn-primary btn-block">Watch Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <img src="https://img.youtube.com/vi/pkRtK9QDwGI/0.jpg" alt="Traffic mode detection thumbnail" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Traffic mode detection for Dhaka, Bangladesh</h5>
-                        <p class="card-text">L4 T1 (7th semester) <br><strong>Technologies:</strong> Python, Google Colab</p>
-                        <a href="https://youtu.be/pkRtK9QDwGI?si=MZnnbHDB0KcMbXGN" class="btn btn-primary btn-block">Watch Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <img src="https://img.youtube.com/vi/PItVsZRdbVo/0.jpg" alt="Trip Tracker App thumbnail" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Trip Tracker app for collecting user data [Funded by CASR]</h5>
-                        <p class="card-text">L3 T2 (6th semester) <br><strong>Technologies:</strong> Flutter, MongoDB</p>
-                        <a href="https://youtu.be/PItVsZRdbVo?si=ydOyUxiiCuzVrO60" class="btn btn-primary btn-block">Watch Demo</a>
+                        <h5 class="card-title">Urban Freight Attraction Modelling in Dhaka City</h5>
+                        <p class="card-text">
+                            Undergraduate thesis project on establishment-level freight trip attraction
+                            in Dhaka. Collected and analysed establishment-based data to model freight
+                            attraction in a dense, developing-city context, contributing to better
+                            understanding of urban freight patterns.
+                        </p>
+                        <p class="card-text">
+                            <strong>Focus:</strong> Freight generation & attraction, urban logistics, data-driven modelling
+                        </p>
+                        <!-- <a href="#" class="btn btn-primary btn-block">Thesis Summary</a> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
     <section class="section mt-3">
         <div class="container mt-8">
-            <p class="copyright">© <em id="date">2024</em> Kaiser Hamid</p>
+            <p class="copyright">© <em id="date">2024</em> Noushin Syeara Rodoshi</p>
         </div>
         <p>
             This page was last updated on :
@@ -241,11 +189,12 @@
                     var formattedDate = months[lastModDate.getMonth()] + ' ' + lastModDate.getDate() + ', ' + lastModDate.getFullYear();
                     document.write(formattedDate);
                 }
-                lastModified()
+                lastModified();
             </script>
         </p>
     </section>
 
+    <!-- Scripts -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
@@ -258,7 +207,3 @@
     </script>
 </body>
 </html>
-
-
-
-
