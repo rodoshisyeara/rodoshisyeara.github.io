@@ -15,64 +15,33 @@
 
   <style>
     /* Dark Mode Styles */
-    body.dark-mode {
-      background-color: #121212;
-      color: #ffffff;
-    }
-    body.dark-mode .card {
-      background-color: #2c2c2c;
-      color: #ffffff;
-      border: 1px solid #444;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
-    body.dark-mode .card-body {
-      background-color: #2c2c2c;
-      border-top: 1px solid #444;
-      padding: 15px;
-    }
-    body.dark-mode .card-title,
-    body.dark-mode .card-text {
-      color: #ffffff;
-    }
-    body.dark-mode .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
-      color: white;
-    }
-    body.light-mode {
-      background-color: #ffffff;
-      color: #000000;
-    }
-    .card-footer {
-      display: none;
-    }
+    body.dark-mode { background-color:#121212; color:#ffffff; }
+    body.dark-mode .card { background-color:#2c2c2c; color:#ffffff; border:1px solid #444; box-shadow:0 4px 8px rgba(0,0,0,.5); }
+    body.dark-mode .card-body { background-color:#2c2c2c; border-top:1px solid #444; padding:15px; }
+    body.dark-mode .card-title, body.dark-mode .card-text { color:#ffffff; }
+    body.dark-mode .btn-primary { background-color:#007bff; border-color:#007bff; color:#fff; }
+    body.light-mode { background-color:#ffffff; color:#000000; }
+    .card-footer { display:none; }
 
     /* Project layout styles */
-    .project-card {
-      border-radius: 12px;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    .project-card { border-radius:12px; border:1px solid #e0e0e0; box-shadow:0 4px 10px rgba(0,0,0,.08); }
+    .project-title { font-weight:600; }
+    .project-media { margin:20px 0; }
+
+    /* Make media consistently sized */
+    .project-cover, .project-video {
+      width:100%;
+      border-radius:10px;
+      display:block;
+      aspect-ratio:16 / 9;
+      object-fit:cover;
+      background:#000;
     }
-    .project-title {
-      font-weight: 600;
-    }
-    .project-media {
-      margin: 20px 0;
-    }
-    .project-cover,
-    .project-video {
-      width: 100%;
-      border-radius: 10px;
-      display: block;
-    }
-    .project-video {
-      max-height: 450px;
-    }
-    body.dark-mode .project-card {
-      background-color: #2c2c2c;
-      border-color: #444;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
+
+    body.dark-mode .project-card { background-color:#2c2c2c; border-color:#444; box-shadow:0 4px 8px rgba(0,0,0,.5); }
+
+    /* Optional: spacing so heading doesn't tuck under fixed navbar on some screens */
+    .projects-container { margin-top: 5rem; padding-top: 1rem; }
   </style>
 </head>
 
@@ -89,15 +58,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto align-items-center">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="publication.html">Publication</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="projects.html">Projects</a></li>
           <div>
             <input type="checkbox" class="checkbox" id="chk" onclick="darkmode()" />
             <label class="label" for="chk">
@@ -112,7 +75,7 @@
   </nav>
 
   <!-- Projects Content -->
-  <div class="container mt-5">
+  <div class="container projects-container">
     <h2 class="col-12 mb-4 text-center">Projects</h2>
 
     <!-- Computer Vision & Machine Learning for Transportation -->
@@ -125,20 +88,23 @@
           <div class="card-body">
             <h4 class="project-title mb-3">YOLOv8 Traffic Detection for Dhaka</h4>
             <div class="project-media">
-              <img src="assets/imgs/yolov8-traffic-cover.jpg"
-                   alt="Cover image for YOLOv8 Traffic Detection for Dhaka"
-                   class="project-cover img-fluid">
+              <img
+                src="assets/imgs/yolov8-traffic-cover.jpg?v=1"
+                alt="Cover image for YOLOv8 Traffic Detection for Dhaka"
+                class="project-cover img-fluid">
             </div>
             <p class="card-text">
               Deployed a YOLOv8-L object detector on Dhaka traffic imagery using a large,
               manually labeled dataset. Focused on multimodal traffic (car, bus, CNG,
               rickshaw, etc.) and built a reusable pipeline for robust detection and analysis.
-              <br>
-              <strong>Code:</strong> <a href="https://github.com/rodoshisyeara/tfpbd-yolo-traffic-detection" target="_blank" rel="noopener">tfpbd-yolo-traffic-detection</a>
             </p>
-            <p class="card-text mb-0">
-              <strong>Technologies:</strong> Python, YOLOv8, Computer Vision
-            </p>
+            <div class="mt-2">
+              <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener"
+                 href="https://github.com/rodoshisyeara/tfpbd-yolo-traffic-detection">
+                View code on GitHub
+              </a>
+            </div>
+            <p class="card-text mb-0 mt-3"><strong>Technologies:</strong> Python, YOLOv8, Computer Vision</p>
           </div>
         </div>
       </div>
@@ -151,8 +117,9 @@
           <div class="card-body">
             <h4 class="project-title mb-3">Dhaka Corridor Multimodal Traffic Counts from Video</h4>
             <div class="project-media">
-              <video class="project-video" controls poster="assets/imgs/dhaka-corridor-poster.JPG">
-                <source src="assets/videos/dhaka-corridor-counts.mp4" type="video/mp4">
+              <video class="project-video" controls
+                     poster="assets/imgs/dhaka-corridor-poster.JPG?v=1" preload="metadata">
+                <source src="assets/videos/dhaka-corridor-counts.mp4?v=1" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -161,12 +128,14 @@
               interest on a corridor video to generate lane-level multimodal traffic counts.
               Captured flows of pedestrians, rickshaws, bicycles, and vehicles and identified
               contra-flow movements for corridor-level analysis.
-              <br>
-              <strong>Code:</strong> <a href="https://github.com/rodoshisyeara/dhaka_corridor_yolo_counts" target="_blank" rel="noopener">dhaka_corridor_yolo_counts</a>
             </p>
-            <p class="card-text mb-0">
-              <strong>Technologies:</strong> Python, YOLOv8, Video Analytics
-            </p>
+            <div class="mt-2">
+              <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener"
+                 href="https://github.com/rodoshisyeara/dhaka_corridor_yolo_counts">
+                View code on GitHub
+              </a>
+            </div>
+            <p class="card-text mb-0 mt-3"><strong>Technologies:</strong> Python, YOLOv8, Video Analytics</p>
           </div>
         </div>
       </div>
@@ -179,21 +148,24 @@
           <div class="card-body">
             <h4 class="project-title mb-3">Road Traffic Accident Severity Prediction</h4>
             <div class="project-media">
-              <img src="assets/imgs/accident-severity-cover.png"
-                   alt="Cover image for Road Traffic Accident Severity Prediction"
-                   class="project-cover img-fluid">
+              <img
+                src="assets/imgs/accident-severity-cover.png?v=1"
+                alt="Cover image for Road Traffic Accident Severity Prediction"
+                class="project-cover img-fluid">
             </div>
             <p class="card-text">
               Developed machine learning models to predict accident severity classes
               (Slight, Serious, Fatal) using an imbalanced accident dataset. Applied
               techniques such as SMOTE and undersampling, and evaluated models including
               Random Forest and XGBoost with F1-score and feature importance analysis.
-              <br>
-              <strong>Code:</strong> <a href="https://github.com/rodoshisyeara/accident-severity-xgboost-shap" target="_blank" rel="noopener">accident-severity-xgboost-shap</a>
             </p>
-            <p class="card-text mb-0">
-              <strong>Technologies:</strong> Python, Scikit-learn, XGBoost, Data Analytics
-            </p>
+            <div class="mt-2">
+              <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener"
+                 href="https://github.com/rodoshisyeara/accident-severity-xgboost-shap">
+                View code on GitHub
+              </a>
+            </div>
+            <p class="card-text mb-0 mt-3"><strong>Technologies:</strong> Python, Scikit-learn, XGBoost, Data Analytics</p>
           </div>
         </div>
       </div>
@@ -231,7 +203,7 @@
     <p>
       This page was last updated on :
       <script type="text/javascript">
-        (function lastModified(){
+        (function(){
           var lastModDate = new Date(document.lastModified);
           var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
           var formattedDate = months[lastModDate.getMonth()] + ' ' + lastModDate.getDate() + ', ' + lastModDate.getFullYear();
@@ -247,11 +219,7 @@
   <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
   <script src="assets/js/steller.js"></script>
   <script>
-    function darkmode() {
-      document.body.classList.toggle("dark-mode");
-    }
+    function darkmode(){ document.body.classList.toggle("dark-mode"); }
   </script>
 </body>
 </html>
-
-
