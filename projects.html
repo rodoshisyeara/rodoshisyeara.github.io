@@ -1,209 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Projects by Noushin Syeara Rodoshi in transportation engineering, intelligent transport systems, and data-driven traffic analysis.">
-    <meta name="author" content="Noushin Syeara Rodoshi">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/imgs/noushin.png">
-    <title>Projects – Noushin Syeara Rodoshi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Projects by Noushin Syeara Rodoshi in transportation engineering, intelligent transport systems, and data-driven traffic analysis.">
+  <meta name="author" content="Noushin Syeara Rodoshi">
+  <link rel="icon" type="image/png" href="assets/imgs/noushin.png">
+  <title>Projects – Noushin Syeara Rodoshi</title>
 
-    <!-- Icons & CSS -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/steller.css">
+  <!-- Icons & CSS -->
+  <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/steller.css">
 
-    <style>
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: #121212;
-            color: #ffffff;
-        }
-        body.dark-mode .card {
-            background-color: #2c2c2c;
-            color: #ffffff;
-            border: 1px solid #444;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-        body.dark-mode .card-body {
-            background-color: #2c2c2c;
-            border-top: 1px solid #444;
-            padding: 15px;
-        }
-        body.dark-mode .card-title,
-        body.dark-mode .card-text {
-            color: #ffffff;
-        }
-        body.dark-mode .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-            color: white;
-        }
-        body.light-mode {
-            background-color: #ffffff;
-            color: #000000;
-        }
-        .card-footer {
-            display: none;
-        }
-    </style>
+  <style>
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    body.dark-mode .card {
+      background-color: #2c2c2c;
+      color: #ffffff;
+      border: 1px solid #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    body.dark-mode .card-body {
+      background-color: #2c2c2c;
+      border-top: 1px solid #444;
+      padding: 15px;
+    }
+    body.dark-mode .card-title,
+    body.dark-mode .card-text {
+      color: #ffffff;
+    }
+    body.dark-mode .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: white;
+    }
+    body.light-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    .card-footer {
+      display: none;
+    }
+
+    /* Project layout styles */
+    .project-card {
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+    .project-title {
+      font-weight: 600;
+    }
+    .project-media {
+      margin: 20px 0;
+    }
+    .project-cover,
+    .project-video {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+    .project-video {
+      max-height: 450px;
+    }
+    body.dark-mode .project-card {
+      background-color: #2c2c2c;
+      border-color: #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+  </style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" onload="onload()">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <h5 class="title">Noushin Syeara Rodoshi</h5>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="publication.html">Publication</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
-                    </li>
-                    <div>
-                        <input type="checkbox" class="checkbox" id="chk" onclick="darkmode()" />
-                        <label class="label" for="chk">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <div class="ball"></div>
-                        </label>
-                    </div>
-                </ul>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <h5 class="title">Noushin Syeara Rodoshi</h5>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publication.html">Publication</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
+          </li>
+          <div>
+            <input type="checkbox" class="checkbox" id="chk" onclick="darkmode()" />
+            <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Projects Content -->
+  <div class="container mt-5">
+    <h2 class="col-12 mb-4 text-center">Projects</h2>
+
+    <!-- Computer Vision & Machine Learning for Transportation -->
+    <h3 class="col-12 mt-5 mb-4 text-center">Computer Vision &amp; Machine Learning for Transportation</h3>
+
+    <!-- YOLOv8 Traffic Detection for Dhaka (image cover) -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-10">
+        <div class="card project-card">
+          <div class="card-body">
+            <h4 class="project-title mb-3">YOLOv8 Traffic Detection for Dhaka</h4>
+            <div class="project-media">
+              <img src="assets/imgs/yolov8-traffic-cover.jpg"
+                   alt="Cover image for YOLOv8 Traffic Detection for Dhaka"
+                   class="project-cover img-fluid">
             </div>
+            <p class="card-text">
+              Deployed a YOLOv8-L object detector on Dhaka traffic imagery using a large,
+              manually labeled dataset. Focused on multimodal traffic (car, bus, CNG,
+              rickshaw, etc.) and built a reusable pipeline for robust detection and analysis.
+            </p>
+            <p class="card-text mb-0">
+              <strong>Technologies:</strong> Python, YOLOv8, Computer Vision
+            </p>
+          </div>
         </div>
-    </nav>
-
-    <!-- Projects Content -->
-    <div class="container mt-5">
-        <h2 class="col-12 mb-4 text-center">Projects</h2>
-
-        <!-- Computer Vision & ML for Transportation -->
-        <h3 class="col-12 mt-5 mb-4">Computer Vision & Machine Learning for Transportation</h3>
-        <div class="row">
-            <!-- YOLOv8 Traffic Detection -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">YOLOv8 Traffic Detection for Dhaka</h5>
-                        <p class="card-text">
-                            Deployed a YOLOv8-L object detector on Dhaka traffic imagery using a large,
-                            manually labeled dataset. Focused on multimodal traffic (car, bus, CNG,
-                            rickshaw, etc.) and built a reusable pipeline for robust detection and analysis.
-                        </p>
-                        <p class="card-text">
-                            <strong>Technologies:</strong> Python, YOLOv8, Computer Vision
-                        </p>
-                        <!-- Add your GitHub link here when ready -->
-                        <!-- <a href="#" class="btn btn-primary btn-block">Code</a> -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dhaka Corridor Multimodal Traffic Counts -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Dhaka Corridor Multimodal Traffic Counts from Video</h5>
-                        <p class="card-text">
-                            Used a YOLOv8-based detector, line-based tracking, and hand-drawn regions of
-                            interest on a corridor video to generate lane-level multimodal traffic counts.
-                            Captured flows of pedestrians, rickshaws, bicycles, and vehicles and identified
-                            contra-flow movements for corridor-level analysis.
-                        </p>
-                        <p class="card-text">
-                            <strong>Technologies:</strong> Python, YOLOv8, Video Analytics
-                        </p>
-                        <!-- <a href="#" class="btn btn-primary btn-block">Code</a> -->
-                        <!-- <a href="#" class="btn btn-primary btn-block">Demo</a> -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Road Traffic Accident Severity Prediction -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Road Traffic Accident Severity Prediction</h5>
-                        <p class="card-text">
-                            Developed machine learning models to predict accident severity classes
-                            (Slight, Serious, Fatal) using an imbalanced accident dataset. Applied
-                            techniques such as SMOTE and undersampling, and evaluated models including
-                            Random Forest and XGBoost with F1-score and feature importance analysis.
-                        </p>
-                        <p class="card-text">
-                            <strong>Technologies:</strong> Python, Scikit-learn, XGBoost, Data Analytics
-                        </p>
-                        <!-- <a href="#" class="btn btn-primary btn-block">Code</a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Transportation Modelling & Research -->
-        <h3 class="col-12 mt-5 mb-4">Transportation Modelling & Research</h3>
-        <div class="row">
-            <!-- Freight Attraction Modelling / Thesis -->
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Urban Freight Attraction Modelling in Dhaka City</h5>
-                        <p class="card-text">
-                            Undergraduate thesis project on establishment-level freight trip attraction
-                            in Dhaka. Collected and analysed establishment-based data to model freight
-                            attraction in a dense, developing-city context, contributing to better
-                            understanding of urban freight patterns.
-                        </p>
-                        <p class="card-text">
-                            <strong>Focus:</strong> Freight generation & attraction, urban logistics, data-driven modelling
-                        </p>
-                        <!-- <a href="#" class="btn btn-primary btn-block">Thesis Summary</a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <section class="section mt-3">
-        <div class="container mt-8">
-            <p class="copyright">© <em id="date">2024</em> Noushin Syeara Rodoshi</p>
+    <!-- Dhaka Corridor Multimodal Traffic Counts from Video (video cover) -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-10">
+        <div class="card project-card">
+          <div class="card-body">
+            <h4 class="project-title mb-3">Dhaka Corridor Multimodal Traffic Counts from Video</h4>
+            <div class="project-media">
+              <video class="project-video" controls poster="assets/imgs/dhaka-corridor-poster.jpg">
+                <source src="assets/videos/dhaka-corridor-counts.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p class="card-text">
+              Used a YOLOv8-based detector, line-based tracking, and hand-drawn regions of
+              interest on a corridor video to generate lane-level multimodal traffic counts.
+              Captured flows of pedestrians, rickshaws, bicycles, and vehicles and identified
+              contra-flow movements for corridor-level analysis.
+            </p>
+            <p class="card-text mb-0">
+              <strong>Technologies:</strong> Python, YOLOv8, Video Analytics
+            </p>
+          </div>
         </div>
-        <p>
-            This page was last updated on :
-            <script type="text/javascript">
-                function lastModified() {
-                    var lastModDate = new Date(document.lastModified);
-                    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                    var formattedDate = months[lastModDate.getMonth()] + ' ' + lastModDate.getDate() + ', ' + lastModDate.getFullYear();
-                    document.write(formattedDate);
-                }
-                lastModified();
-            </script>
-        </p>
-    </section>
+      </div>
+    </div>
 
-    <!-- Scripts -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-    <script src="assets/js/steller.js"></script>
-    <script>
-        function darkmode() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-        }
-    </script>
+    <!-- Road Traffic Accident Severity Prediction (image cover) -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-10">
+        <div class="card project-card">
+          <div class="card-body">
+            <h4 class="project-title mb-3">Road Traffic Accident Severity Prediction</h4>
+            <div class="project-media">
+              <img src="assets/imgs/accident-severity-cover.jpg"
+                   alt="Cover image for Road Traffic Accident Severity Prediction"
+                   class="project-cover img-fluid">
+            </div>
+            <p class="card-text">
+              Developed machine learning models to predict accident severity classes
+              (Slight, Serious, Fatal) using an imbalanced accident dataset. Applied
+              techniques such as SMOTE and undersampling, and evaluated models including
+              Random Forest and XGBoost with F1-score and feature importance analysis.
+            </p>
+            <p class="card-text mb-0">
+              <strong>Technologies:</strong> Python, Scikit-learn, XGBoost, Data Analytics
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transportation Modelling & Research -->
+    <h3 class="col-12 mt-5 mb-4 text-center">Transportation Modelling &amp; Research</h3>
+
+    <!-- Urban Freight Attraction Modelling in Dhaka City (no media block) -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10">
+        <div class="card project-card">
+          <div class="card-body">
+            <h4 class="project-title mb-3">Urban Freight Attraction Modelling in Dhaka City</h4>
+            <p class="card-text">
+              Undergraduate thesis project on establishment-level freight trip attraction
+              in Dhaka. Collected and analysed establishment-based data to model freight
+              attraction in a dense, developing-city context, contributing to better
+              understanding of urban freight patterns.
+            </p>
+            <p class="card-text mb-0">
+              <strong>Focus:</strong> Freight generation &amp; attraction, urban logistics, data-driven modelling
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <section class="section mt-3">
+    <div class="container mt-8">
+      <p class="copyright">© <em id="date">2024</em> Noushin Syeara Rodoshi</p>
+    </div>
+    <p>
+      This page was last updated on :
+      <script type="text/javascript">
+        (function lastModified(){
+          var lastModDate = new Date(document.lastModified);
+          var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+          var formattedDate = months[lastModDate.getMonth()] + ' ' + lastModDate.getDate() + ', ' + lastModDate.getFullYear();
+          document.write(formattedDate);
+        })();
+      </script>
+    </p>
+  </section>
+
+  <!-- Scripts -->
+  <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+  <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+  <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+  <script src="assets/js/steller.js"></script>
+  <script>
+    function darkmode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
